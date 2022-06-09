@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('donald-giannatti-Wj1D-qiOseE-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1{
+    color: rgba(255, 255, 255, .544);
+    font-size: 2em;
+    text-align: center;
+}
+
+.mainWrapper,
+.resultWrapper{
+    margin: 2em auto 0;
+    width: 100%;
+    padding: 0.5em;
+    color: white;
+}
+
+.nameInput{
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+    border-left: 2px solid rgba(0, 0, 0, .2);
+    font-size: 1em;
+    height: 2.3em;
+    padding: 0.3em 0.5em;
+    background: transparent;
+    margin-bottom: 1em;
+    border-bottom-left-radius: 0.4em;
+    color: white;
+}
+
+.nameInput::placeholder{
+    color: rgba(255, 255, 255, .844);
+}
+
+.SubmitBtn{
+    padding: 0.5em 0.5em;
+    width: 50%;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, .5);
+    font-weight: bolder;
+    font-style: oblique;
+    border-radius: 0.3em;
+    background: rgb(32, 163, 207);
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.SubmitBtn:hover{
+    background: transparent;
+    border: 0.1em double rgb(65, 105, 225);
+}
+
+.noteThis{
+    font-size: 0.8em;
+    margin-top: 0.4em;
+    color: rgba(0, 0, 0, .9);
+    font-weight: bold;
+}
+
+span{
+    color: red;
+    text-decoration: underline;
+}
+
+.resultWrapper{
+    background-color: rgba(0, 0, 0, .5);
+    padding-bottom: 2em;
+}
+
+.nameAnalysisHeader{
+    text-align: center;
+    color: rgb(32, 163, 207);
+    font-size: 2em;
+    font-family: 'Satisfy', sans-serif;
+    text-decoration: underline;
+
+}
+
+.result{
+    font-size: 1.1em;
+    line-height: 2em;
+    color: rgba(255, 255, 255, .54);
+    font-style: oblique;
+    opacity: 0;
+    display: none;
+}
+
+.footer{
+    color: rgba(0, 0, 0, .9);
+    text-align: center;
+    background: rgba(0, 0, 0, .2);
+    font-weight: 700;
+    margin: 2em 0;
+}
+
+/* loading bar */
+
+.loader{
+    margin: 2em auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+    /* animation: rotate 4s linear infinite; */
+}
+
+.loader > span{
+    display: inline-block;
+    background-color: rgba(0, 0, 223, 0.8);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin: 0 0.2em;
+    transform: translate3d(0);
+    animation: bounce 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2){
+   background-color: rgb(65, 105, 225);
+   animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3){
+   animation-delay: 0.4s;
+}
+
+@keyframes bounce{
+    to{
+       width: 16px;
+       height: 16px;
+       transform: translate3d(0, -16px, 0);
+    }
+}
+
+@keyframes grow{
+    to{
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 768px){
+   .mainWrapper, 
+   .resultWrapper{
+      width: 400px;
+      box-shadow: 2px 2px 4px rgb(32, 163, 207),
+      -2px -2px 4px rgb(32, 163, 207);
+      border-radius: 0.5em;
+   }
+   
+   .resultWrapper{
+      width: 90%;
+      box-shadow: 2px 2px 4px rgb(0, 0, 0, .5),
+      -2px -2px 4px rgba(0, 0, 0, .5);
+   }
+}
